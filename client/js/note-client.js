@@ -8,7 +8,7 @@ async function addNote(noteData) {
     body: JSON.stringify(noteData),
   });
 
-  return response.json();
+  return response;
 }
 async function updateNote(noteData) {
   let url = "http://localhost:3000";
@@ -17,7 +17,7 @@ async function updateNote(noteData) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(noteData),
   });
-  return response.json();
+  return response;
 }
 async function deleteNote(noteId) {
   let url = "http://localhost:3000/notes";
